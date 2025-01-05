@@ -26,6 +26,11 @@ public class UserService {
         return user;
     }
 
+    public List<User> getAllUsers(){
+        List<User> allUser = fileUserComp.readUsers();
+        return allUser;
+    }
+
     public User getUserById(Long id){
         List<User> userList = fileUserComp.readUsers();
         return userList.stream()
